@@ -9,7 +9,7 @@ const button_title = process.env.button_title;
 const bot = new Telegraf(token);
 
 const inlineMessageRatingKeyboard = Markup.inlineKeyboard([
-  Markup.button.webApp(button_title, web_app_url),
+  Markup.button.url(button_title, web_app_url),
 ]);
 
 const sendBtn = (ctx) =>
