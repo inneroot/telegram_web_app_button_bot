@@ -16,6 +16,5 @@ const sendBtn = (ctx) =>
   ctx.telegram.sendMessage(ctx.chat.id, message, inlineMessageRatingKeyboard);
 
 bot.command("start", sendBtn);
-bot.on("message", sendBtn);
 
 bot.launch();
