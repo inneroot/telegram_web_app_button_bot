@@ -2,6 +2,7 @@ services:
   buttonbot:
     image: inneroot/buttonbot:latest
     pull_policy: always
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
