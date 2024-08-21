@@ -3,8 +3,9 @@ import "dotenv/config";
 
 const token = process.env.bot_token;
 const web_app_url = process.env.web_app_url;
-const message = process.env.message;
-const button_title = process.env.button_title;
+const message = process.env.message ?? "open app link";
+const button_title = process.env.button_title ?? "link";
+const bot_command = process.env.bot_command ?? "start";
 
 const bot = new Telegraf(token);
 
@@ -15,6 +16,6 @@ const inlineMessageRatingKeyboard = Markup.inlineKeyboard([
 const sendBtn = (ctx) =>
   ctx.telegram.sendMessage(ctx.chat.id, message, inlineMessageRatingKeyboard);
 
-bot.command("start", sendBtn);
+bot.command(bot_command, sendBtn);
 
 bot.launch();

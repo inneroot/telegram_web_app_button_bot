@@ -17,3 +17,4 @@ services:
       - web_app_url=${web_app_url}
       - message=${message}
       - button_title=${button_title}
+      - bot_command=${bot_command}
